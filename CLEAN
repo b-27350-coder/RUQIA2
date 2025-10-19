@@ -1,0 +1,82 @@
+def add(num1: float, num2: float) -> float:
+    """
+    Add two numbers together.
+    
+    Args:
+        num1 (float): First number
+        num2 (float): Second number
+    
+    Returns:
+        float: Sum of num1 and num2
+    """
+    return num1 + num2
+
+
+def subtract(num1: float, num2: float) -> float:
+    """
+    Subtract second number from first number.
+    
+    Args:
+        num1 (float): First number
+        num2 (float): Second number
+    
+    Returns:
+        float: Difference of num1 and num2
+    """
+    return num1 - num2
+
+
+def multiply(num1: float, num2: float) -> float:
+    """
+    Multiply two numbers.
+    
+    Args:
+        num1 (float): First number
+        num2 (float): Second number
+    
+    Returns:
+        float: Product of num1 and num2
+    """
+    return num1 * num2
+
+
+def divide(num1: float, num2: float) -> float:
+    """
+    Divide first number by second number.
+    
+    Args:
+        num1 (float): Numerator
+        num2 (float): Denominator
+    
+    Returns:
+        float: Result of division
+    
+    Raises:
+        ValueError: If denominator is zero
+    """
+    if num2 == 0:
+        raise ValueError("Cannot divide by zero")
+    return num1 / num2
+
+
+def main():
+    """Main function to demonstrate calculator operations."""
+    # Define numbers
+    number1 = 10
+    number2 = 5
+    
+    # Perform calculations
+    sum_result = add(number1, number2)
+    difference_result = subtract(number1, number2)
+    product_result = multiply(number1, number2)
+    quotient_result = divide(number1, number2)
+    
+    # Display results
+    print(f"Addition: {number1} + {number2} = {sum_result}")
+    print(f"Subtraction: {number1} - {number2} = {difference_result}")
+    print(f"Multiplication: {number1} * {number2} = {product_result}")
+    print(f"Division: {number1} / {number2} = {quotient_result}")
+
+
+if _name_ == "_main_":
+    main()
